@@ -31,6 +31,8 @@ const WeatherIcon = ({ weatherDescription, weatherCode, dayNight }) => {
   return (
     <div className="weather-img">
       <img
+        width="170"
+        height="170"
         src={weatherIcon(weatherCode, dayNight)}
         alt=""
         className="weather-icon"

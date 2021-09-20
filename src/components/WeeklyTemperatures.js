@@ -19,6 +19,8 @@ const WeeklyTemperatures = ({ weatherDaily }) => {
               <span className="week-day">{dateBuilder(elem.dt)}</span>{" "}
               <span className="week-temp">{Math.round(elem.temp.day)}°C</span>{" "}
               <img
+                width="40"
+                height="40"
                 src={`http://openweathermap.org/img/wn/${elem.weather[0].icon}.png`}
                 alt=""
                 className="week-icon"
