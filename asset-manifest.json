@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Weather-APP-react/static/css/main.f8ac5919.chunk.css",
+    "main.css": "/Weather-APP-react/static/css/main.ecc57bc8.chunk.css",
     "main.js": "/Weather-APP-react/static/js/main.eb71ca56.chunk.js",
     "main.js.map": "/Weather-APP-react/static/js/main.eb71ca56.chunk.js.map",
     "runtime-main.js": "/Weather-APP-react/static/js/runtime-main.75f0f9e2.js",
@@ -8,16 +8,16 @@
     "static/js/2.994933d4.chunk.js": "/Weather-APP-react/static/js/2.994933d4.chunk.js",
     "static/js/2.994933d4.chunk.js.map": "/Weather-APP-react/static/js/2.994933d4.chunk.js.map",
     "index.html": "/Weather-APP-react/index.html",
-    "static/css/main.f8ac5919.chunk.css.map": "/Weather-APP-react/static/css/main.f8ac5919.chunk.css.map",
+    "static/css/main.ecc57bc8.chunk.css.map": "/Weather-APP-react/static/css/main.ecc57bc8.chunk.css.map",
     "static/js/2.994933d4.chunk.js.LICENSE.txt": "/Weather-APP-react/static/js/2.994933d4.chunk.js.LICENSE.txt",
-    "static/media/Main.css": "/Weather-APP-react/static/media/Storm.5cf15f96.svg",
+    "static/media/Main.css": "/Weather-APP-react/static/media/Storm.eb7ab6ca.svg",
     "static/media/App.css": "/Weather-APP-react/static/media/bg.3cd9460c.webp",
     "static/media/pressure-icon.bfe16e8c.svg": "/Weather-APP-react/static/media/pressure-icon.bfe16e8c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.75f0f9e2.js",
     "static/js/2.994933d4.chunk.js",
-    "static/css/main.f8ac5919.chunk.css",
+    "static/css/main.ecc57bc8.chunk.css",
     "static/js/main.eb71ca56.chunk.js"
   ]
 }
