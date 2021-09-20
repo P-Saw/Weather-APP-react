@@ -1,26 +1,23 @@
 {
   "files": {
-    "main.css": "/Weather-APP-react/static/css/main.9db9735e.chunk.css",
-    "main.js": "/Weather-APP-react/static/js/main.feee9460.chunk.js",
-    "main.js.map": "/Weather-APP-react/static/js/main.feee9460.chunk.js.map",
+    "main.css": "/Weather-APP-react/static/css/main.39536888.chunk.css",
+    "main.js": "/Weather-APP-react/static/js/main.d6b81ccd.chunk.js",
+    "main.js.map": "/Weather-APP-react/static/js/main.d6b81ccd.chunk.js.map",
     "runtime-main.js": "/Weather-APP-react/static/js/runtime-main.75f0f9e2.js",
     "runtime-main.js.map": "/Weather-APP-react/static/js/runtime-main.75f0f9e2.js.map",
     "static/js/2.994933d4.chunk.js": "/Weather-APP-react/static/js/2.994933d4.chunk.js",
     "static/js/2.994933d4.chunk.js.map": "/Weather-APP-react/static/js/2.994933d4.chunk.js.map",
     "index.html": "/Weather-APP-react/index.html",
-    "static/css/main.9db9735e.chunk.css.map": "/Weather-APP-react/static/css/main.9db9735e.chunk.css.map",
+    "static/css/main.39536888.chunk.css.map": "/Weather-APP-react/static/css/main.39536888.chunk.css.map",
     "static/js/2.994933d4.chunk.js.LICENSE.txt": "/Weather-APP-react/static/js/2.994933d4.chunk.js.LICENSE.txt",
     "static/media/Main.css": "/Weather-APP-react/static/media/Storm.5cf15f96.svg",
-    "static/media/App.css": "/Weather-APP-react/static/media/bg.84324df8.jpg",
-    "static/media/clouds-icon.80d5cbe6.jpg": "/Weather-APP-react/static/media/clouds-icon.80d5cbe6.jpg",
-    "static/media/humidity-icon.cd469948.jpg": "/Weather-APP-react/static/media/humidity-icon.cd469948.jpg",
-    "static/media/pressure-icon.7decdc4f.svg": "/Weather-APP-react/static/media/pressure-icon.7decdc4f.svg",
-    "static/media/wind-icon.14cfa89b.jpg": "/Weather-APP-react/static/media/wind-icon.14cfa89b.jpg"
+    "static/media/App.css": "/Weather-APP-react/static/media/bg.8d005c04.jpg",
+    "static/media/pressure-icon.bfe16e8c.svg": "/Weather-APP-react/static/media/pressure-icon.bfe16e8c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.75f0f9e2.js",
     "static/js/2.994933d4.chunk.js",
-    "static/css/main.9db9735e.chunk.css",
-    "static/js/main.feee9460.chunk.js"
+    "static/css/main.39536888.chunk.css",
+    "static/js/main.d6b81ccd.chunk.js"
   ]
 }
