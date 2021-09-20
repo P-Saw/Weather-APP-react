@@ -1,0 +1,13 @@
+.weather-info-card {
+  text-align: center;
+  margin: auto;
+}
+.info-icon {
+  width: 100%;
+  max-width: 60px;
+}
+.weather-info {
+  margin: 0;
+  font-weight: 500;
+  color: #4b4539;
+}

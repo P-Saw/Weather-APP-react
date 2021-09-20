@@ -1,0 +1,12 @@
+.weather-icon {
+  object-fit: contain;
+  width: 100%;
+  max-width: 170px;
+}
+.weather-description {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #4b4539;
+  margin: 1rem 0;
+}

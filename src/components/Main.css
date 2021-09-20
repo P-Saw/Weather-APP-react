@@ -1,0 +1,112 @@
+.main-bg-app {
+  position: relative;
+  color: white;
+  padding: 1rem 1rem 3rem 1rem;
+  margin: 1rem auto 0 auto;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.main-bg-app::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(42, 19, 9, 0) 70%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: -1;
+}
+
+.clouds {
+  background: url(../assets/Clouds.svg) no-repeat center center/cover;
+}
+.mist {
+  background: url(../assets/Mist.svg) no-repeat center center/cover;
+}
+.snow {
+  background: url(../assets/Snow.svg) no-repeat center center/cover;
+}
+.rain {
+  background: url(../assets/Rain.svg) no-repeat center right/cover;
+}
+.storm {
+  background: url(../assets/Storm.svg) no-repeat center center/cover;
+}
+.clear {
+  background: url(../assets/Clear.svg) no-repeat center left/cover;
+}
+.clear-night {
+  background: url(../assets/Night.svg) no-repeat center right/ cover;
+}
+
+.place-name {
+  text-align: right;
+}
+.town,
+.country {
+  margin: 0.5rem 0;
+}
+
+.town {
+  font-size: 2.5rem;
+}
+.country {
+  font-size: 1.5rem;
+}
+
+.place-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.hour,
+.day {
+  margin: 0;
+}
+.hour {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.day {
+  font-size: 1.3rem;
+}
+.temperature {
+  font-size: 4rem;
+}
+
+@media (min-width: 550px) {
+  .town {
+    font-size: 3rem;
+  }
+  .country {
+    font-size: 2rem;
+  }
+  .hour {
+    font-size: 2.6rem;
+  }
+  .day {
+    font-size: 2rem;
+  }
+  .temperature {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-bg-app {
+    padding: 1rem 2rem;
+    margin: 0;
+    flex: 1 1 70%;
+  }
+  .temperature {
+    font-size: 8rem;
+  }
+}
