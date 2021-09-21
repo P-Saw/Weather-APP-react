@@ -1,13 +1,14 @@
 .main-bg-app {
   position: relative;
   color: white;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1rem 2rem 2rem 2rem;
   margin: 1rem auto 0 auto;
   min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
+  overflow: hidden;
 }
 
 .main-bg-app::before {
@@ -81,6 +82,37 @@
 }
 .temperature {
   font-size: 4rem;
+}
+
+.slide-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  transition: transform 0.5s linear;
+}
+.slide-wrapper.open {
+  transform: translateX(100%);
+}
+.slide-chart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  top: 40%;
+  left: 0;
+  background-color: white;
+  color: #4b4539;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding: 0.2rem;
+  font-weight: 500;
+  border-radius: 0 0.8rem 0.8rem 0;
+  cursor: pointer;
+}
+.slide-text {
+  margin: 0;
+  letter-spacing: -0.3rem;
 }
 
 @media (min-width: 550px) {

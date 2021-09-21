@@ -1,0 +1,45 @@
+.chart-container {
+  top: 30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.5s linear;
+}
+.chart-container.open {
+  transform: translateX(0%);
+}
+
+.close {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 10px;
+  content: " ";
+  height: 30px;
+  width: 2px;
+  background-color: #4b4539;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.chart {
+  padding: 3rem 1rem;
+}

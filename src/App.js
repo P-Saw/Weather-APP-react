@@ -7,6 +7,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [weatherStart, setWeatherStart] = useState({});
   const [weatherDaily, setWeatherDaily] = useState([]);
+  const [weatherHourly, setWeatherHourly] = useState([]);
   const [place, setPlace] = useState({});
   const [errorMsg, setErrorMsg] = useState("");
   const [lat, setLat] = useState(0);
@@ -32,6 +33,7 @@ function App() {
       setWeatherCode(weather.current.weather[0].id);
       setDayNight(weather.current.weather[0].icon);
       setWeatherDaily(weather.daily);
+      setWeatherHourly(weather.hourly);
       const getPlace = await fetch(
         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
       );
@@ -61,7 +63,7 @@ function App() {
           console.log(data);
           setQuery("");
           return fetch(
-            `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=hourly,current,minutely&units=metric&appid=${api_key}`
+            `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=current,minutely&units=metric&appid=${api_key}`
           );
         })
         .then((res) => {
@@ -70,6 +72,7 @@ function App() {
         .then((data) => {
           console.log(data);
           setWeatherDaily(data.daily);
+          setWeatherHourly(data.hourly);
         })
         .catch((err) => {
           setErrorMsg(err.message);
@@ -102,6 +105,7 @@ function App() {
         <Main
           weatherStart={weatherStart}
           weatherCode={weatherCode}
+          weatherHourly={weatherHourly}
           dayNight={dayNight}
           place={place}
         />

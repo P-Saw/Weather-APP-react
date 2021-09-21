@@ -1,7 +1,18 @@
+import { useState } from "react";
+import DailyTempChart from "./DailyTempChart";
 import "./Main.css";
 
-const Main = ({ weatherStart, place, weatherCode, dayNight }) => {
+const Main = ({
+  weatherStart,
+  place,
+  weatherCode,
+  dayNight,
+  weatherHourly,
+}) => {
   console.log(weatherCode);
+  const [chartOpen, setChartOpen] = useState(false);
+
+  const handleChartOpen = () => setChartOpen(!chartOpen);
 
   const dateConverter = (timezone) => {
     const d = new Date();
@@ -55,7 +66,7 @@ const Main = ({ weatherStart, place, weatherCode, dayNight }) => {
     const hour = convertedDate.getHours();
     let minutes = convertedDate.getMinutes();
     if (minutes < 10) {
-      minutes = minutes + "0";
+      minutes = "0" + minutes;
     }
 
     return `${hour}:${minutes}`;
@@ -67,7 +78,7 @@ const Main = ({ weatherStart, place, weatherCode, dayNight }) => {
     const hour = date.getHours();
     let minutes = date.getMinutes();
     if (minutes < 10) {
-      minutes = minutes + "0";
+      minutes = "0" + minutes;
     }
 
     return `${hour}:${minutes}`;
@@ -118,6 +129,18 @@ const Main = ({ weatherStart, place, weatherCode, dayNight }) => {
               </div>
             </div>
           </div>
+          <div className={`slide-wrapper ${chartOpen ? "open" : ""}`}>
+            <div className="slide-chart" onClick={handleChartOpen}>
+              <p className="slide-text">DAILY</p>
+              <p className="slide-text">CHART</p>
+              <span>&#8594;</span>
+            </div>
+          </div>
+          <DailyTempChart
+            chartOpen={chartOpen}
+            handleChartOpen={handleChartOpen}
+            weatherHourly={weatherHourly}
+          />
         </>
       ) : typeof weatherStart.main != "undefined" ? (
         <>
@@ -137,6 +160,18 @@ const Main = ({ weatherStart, place, weatherCode, dayNight }) => {
               </div>
             </div>
           </div>
+          <div className={`slide-wrapper ${chartOpen ? "open" : ""}`}>
+            <div className="slide-chart" onClick={handleChartOpen}>
+              <p className="slide-text">DAILY</p>
+              <p className="slide-text">CHART</p>
+              <span>&#8594;</span>
+            </div>
+          </div>
+          <DailyTempChart
+            chartOpen={chartOpen}
+            handleChartOpen={handleChartOpen}
+            weatherHourly={weatherHourly}
+          />
         </>
       ) : (
         ""
