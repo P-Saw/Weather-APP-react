@@ -28,7 +28,6 @@ function App() {
         `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=minutely&units=metric&appid=${api_key}`
       );
       const weather = await getWeather.json();
-      console.log(weather);
       setWeatherStart(weather);
       setWeatherCode(weather.current.weather[0].id);
       setDayNight(weather.current.weather[0].icon);
@@ -51,7 +50,7 @@ function App() {
       )
         .then((res) => {
           if (!res.ok) {
-            throw Error("Something went wrong, please try again...");
+            throw Error("City not found, please try again...");
           }
           return res.json();
         })
@@ -60,7 +59,6 @@ function App() {
           setWeatherStart(data);
           setWeatherCode(data.weather[0].id);
           setDayNight(data.weather[0].icon);
-          console.log(data);
           setQuery("");
           return fetch(
             `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=current,minutely&units=metric&appid=${api_key}`
@@ -70,9 +68,17 @@ function App() {
           return res.json();
         })
         .then((data) => {
-          console.log(data);
           setWeatherDaily(data.daily);
           setWeatherHourly(data.hourly);
+          return fetch(
+            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${data.lat}&longitude=${data.lon}&localityLanguage=en`
+          );
+        })
+        .then((res) => {
+          return res.json();
+        })
+        .then((place) => {
+          setPlace(place);
         })
         .catch((err) => {
           setErrorMsg(err.message);

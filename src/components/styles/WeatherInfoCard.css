@@ -1,6 +1,6 @@
 .weather-info-card {
-  text-align: center;
   margin: auto;
+  text-align: center;
 }
 .info-icon {
   width: 100%;
@@ -8,6 +8,6 @@
 }
 .weather-info {
   margin: 0;
-  font-weight: 500;
   color: #4b4539;
+  font-weight: 500;
 }

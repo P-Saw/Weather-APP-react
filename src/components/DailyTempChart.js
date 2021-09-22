@@ -1,37 +1,33 @@
-import React from "react";
-import "./DailyTempChart.css";
+import "./styles/DailyTempChart.css";
 import { Line, defaults } from "react-chartjs-2";
+import { makeHourArray } from "./makeHourArray.js";
 
 defaults.plugins.legend.display = false;
 
-const DailyTempChart = ({ chartOpen, handleChartOpen, weatherHourly }) => {
+const DailyTempChart = ({
+  chartOpen,
+  handleChartOpen,
+  weatherHourly,
+  hourBuilder,
+}) => {
   const TempArray = weatherHourly
-    .slice(0, -24)
-    .filter((_, i) => i % 2 == 0)
+    .slice(0, -22)
+    .filter((_, i) => i % 2 === 0)
     .map((elem) => {
       return Math.round(elem.temp);
     });
-
-  console.log(TempArray);
+  let hourArray = [];
+  if (typeof hourBuilder != "undefined") {
+    let wholeHour = parseInt(hourBuilder.substr(0, hourBuilder.indexOf(":")));
+    hourArray = makeHourArray(wholeHour);
+  }
   return (
     <div className={`chart-container ${chartOpen ? "open" : ""}`}>
       <div className="close" onClick={handleChartOpen}></div>
+      <h3 className="chart-heading">Next 24h forecast</h3>
       <Line
         data={{
-          labels: [
-            "00:00",
-            "02:00",
-            "04:00",
-            "06:00",
-            "08:00",
-            "10:00",
-            "12:00",
-            "14:00",
-            "16:00",
-            "18:00",
-            "20:00",
-            "22:00",
-          ],
+          labels: typeof hourArray != "undefined" ? hourArray : [],
           datasets: [
             {
               label: "",

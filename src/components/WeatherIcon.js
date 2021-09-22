@@ -1,5 +1,5 @@
 import React from "react";
-import "./WeatherIcon.css";
+import "./styles/WeatherIcon.css";
 import clear_icon from "../assets/Clear-icon.png";
 import clouds_icon from "../assets/Clouds-icon.png";
 import storm_icon from "../assets/Storm-icon.png";

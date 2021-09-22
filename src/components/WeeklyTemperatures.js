@@ -1,5 +1,5 @@
 import React from "react";
-import "./WeeklyTemperatures.css";
+import "./styles/WeeklyTemperatures.css";
 
 const WeeklyTemperatures = ({ weatherDaily }) => {
   const dateBuilder = (timestamp) => {

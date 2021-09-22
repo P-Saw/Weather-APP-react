@@ -1,4 +1,4 @@
-import "./Side.css";
+import "./styles/Side.css";
 import WeeklyTemperatures from "./WeeklyTemperatures";
 import wind_icon from "../assets/wind-icon.jpg";
 import cloud_icon from "../assets/clouds-icon.jpg";

@@ -1,16 +1,16 @@
 .side-app {
-  text-align: center;
-  background-color: white;
-  padding: 1rem;
   margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  text-align: center;
 }
 
 .weather-info-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
   max-width: 450px;
   margin: auto;
+  gap: 0.5rem;
 }
 
 @media (min-width: 768px) {

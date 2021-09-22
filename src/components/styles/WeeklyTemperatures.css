@@ -1,28 +1,28 @@
 h2 {
-  font-size: 2rem;
-  color: #4b4539;
-  font-weight: 500;
   margin: 1rem 0;
+  color: #4b4539;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .temp-list {
   max-width: 350px;
-  list-style: none;
   margin: 0 auto;
   padding: 0 1rem;
+  list-style: none;
 }
 .temp-list-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .temp-list-item:not(:first-child) {
   border-top: 1px solid #4b4539;
 }
 .week-day,
 .week-temp {
+  color: #4b4539;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #4b4539;
 }
 .week-icon {
   width: 40px;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DailyTempChart from "./DailyTempChart";
-import "./Main.css";
+import "./styles/Main.css";
 
 const Main = ({
   weatherStart,
@@ -9,7 +9,6 @@ const Main = ({
   dayNight,
   weatherHourly,
 }) => {
-  console.log(weatherCode);
   const [chartOpen, setChartOpen] = useState(false);
 
   const handleChartOpen = () => setChartOpen(!chartOpen);
@@ -131,7 +130,7 @@ const Main = ({
           </div>
           <div className={`slide-wrapper ${chartOpen ? "open" : ""}`}>
             <div className="slide-chart" onClick={handleChartOpen}>
-              <p className="slide-text">DAILY</p>
+              <p className="slide-text">24H</p>
               <p className="slide-text">CHART</p>
               <span>&#8594;</span>
             </div>
@@ -140,13 +139,20 @@ const Main = ({
             chartOpen={chartOpen}
             handleChartOpen={handleChartOpen}
             weatherHourly={weatherHourly}
+            hourBuilder={hourLocal()}
           />
         </>
       ) : typeof weatherStart.main != "undefined" ? (
         <>
           <div className="place-name">
-            <h1 className="town">{weatherStart.name}</h1>
-            <h3 className="country">{weatherStart.sys.country}</h3>
+            <h1 className="town">
+              {place.city ? place.city : weatherStart.name}
+            </h1>
+            <h3 className="country">
+              {place.countryName
+                ? place.countryName
+                : "Enable localization or search by city"}
+            </h3>
           </div>
 
           <div className="place-info">
@@ -162,7 +168,7 @@ const Main = ({
           </div>
           <div className={`slide-wrapper ${chartOpen ? "open" : ""}`}>
             <div className="slide-chart" onClick={handleChartOpen}>
-              <p className="slide-text">DAILY</p>
+              <p className="slide-text">24H</p>
               <p className="slide-text">CHART</p>
               <span>&#8594;</span>
             </div>
@@ -171,6 +177,7 @@ const Main = ({
             chartOpen={chartOpen}
             handleChartOpen={handleChartOpen}
             weatherHourly={weatherHourly}
+            hourBuilder={hourBuilder(weatherStart.timezone)}
           />
         </>
       ) : (
