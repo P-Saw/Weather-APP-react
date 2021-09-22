@@ -92,7 +92,7 @@ function App() {
   }, [lng]);
 
   return (
-    <div className="App">
+    <main className="App">
       <div className="search-container">
         <input
           type="text"
@@ -126,7 +126,7 @@ function App() {
         All images found on <a href="https://www.vecteezy.com">Vecteezy</a>{" "}
         edited and animated by me.
       </p>
-    </div>
+    </main>
   );
 }
 
